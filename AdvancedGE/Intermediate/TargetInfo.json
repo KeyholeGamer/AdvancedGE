@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "AdvancedGE",
+			"Path": "D:\\AdvancedGE\\Source\\AdvancedGE.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "AdvancedGEEditor",
+			"Path": "D:\\AdvancedGE\\Source\\AdvancedGEEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

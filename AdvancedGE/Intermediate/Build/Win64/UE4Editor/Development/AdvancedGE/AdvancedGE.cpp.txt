@@ -1,0 +1,2 @@
+D:\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Definitions.AdvancedGE.h
+D:\AdvancedGE\Source\AdvancedGE\AdvancedGE.h
