@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AdvancedGE.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{37968F64-426D-4E11-B3BA-A37A4C340EC9}</UniqueIdentifier>
+      <UniqueIdentifier>{D7FDFF7D-F8EF-4451-9B10-F68E1CB46FE3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AdvancedGE.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{DB7A6D35-25A6-45CD-8624-29788E73BC47}</UniqueIdentifier>
+      <UniqueIdentifier>{34787C4C-43F3-4D6B-BC42-581F3512156E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AdvancedGE">
-      <UniqueIdentifier>{CA3C0CE0-E754-4851-9A14-E14C6EF6D960}</UniqueIdentifier>
+      <UniqueIdentifier>{19E25E94-69B2-4794-8DA1-16FFC27DADA8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AdvancedGE\AdvancedGE.Build.cs">
       <Filter>Source\AdvancedGE</Filter>
@@ -54,6 +54,12 @@
       <Filter>Source\AdvancedGE</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\AdvancedGE\FPSProjectile.h">
+      <Filter>Source\AdvancedGE</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AdvancedGE\FPSTarget.cpp">
+      <Filter>Source\AdvancedGE</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdvancedGE\FPSTarget.h">
       <Filter>Source\AdvancedGE</Filter>
     </ClInclude>
   </ItemGroup>

@@ -39,7 +39,7 @@ AFPSProjectile::AFPSProjectile()
 		ProjectileMovementComponent->InitialSpeed = 3000.0f;
 		ProjectileMovementComponent->MaxSpeed = 3000.0f;
 		ProjectileMovementComponent->bRotationFollowsVelocity = true;
-		ProjectileMovementComponent->bShouldBounce = true;
+		ProjectileMovementComponent->bShouldBounce = false;
 		ProjectileMovementComponent->Bounciness = 0.3f;
 		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 	}
@@ -90,11 +90,17 @@ void AFPSProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor
 {
 	if (OtherActor != this && OtherComponent->IsSimulatingPhysics())
 	{
-		OtherComponent->AddImpulseAtLocation
-		(ProjectileMovementComponent->Velocity * 100.0f, Hit.ImpactPoint);
+		
+		/*OtherComponent->AddImpulseAtLocation
+		(ProjectileMovementComponent->Velocity * 100.0f, Hit.ImpactPoint);*/
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("HIT."));
+		Destroy();
+		OtherActor->Destroy();
 	}
-	Destroy();
-
+	if (OtherActor != this) 
+	{
+		Destroy();
+	}
 }
 
 void AFPSProjectile::FireInDirection(const FVector& ShootDirection)

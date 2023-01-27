@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "AdvancedGE",
-			"Path": "D:\\AdvancedGE\\Source\\AdvancedGE.Target.cs",
+			"Path": "D:\\New folder\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGE.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "AdvancedGEEditor",
-			"Path": "D:\\AdvancedGE\\Source\\AdvancedGEEditor.Target.cs",
+			"Path": "D:\\New folder\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGEEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
