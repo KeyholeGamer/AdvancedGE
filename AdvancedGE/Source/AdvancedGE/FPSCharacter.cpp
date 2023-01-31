@@ -46,7 +46,7 @@ void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	// Set up "action" bindings.
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AFPSCharacter::Jump);
 	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &AFPSCharacter::Shoot);
-
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &AFPSCharacter::Reload);
 }
 
 void AFPSCharacter::MoveForward(float Value)
@@ -61,6 +61,11 @@ void AFPSCharacter::MoveRight(float Value)
 	// Find out which way is "right" and record that the player wants to move that way.
 	FVector Direction = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
 	AddMovementInput(Direction, Value);
+}
+
+void AFPSCharacter::Reload()
+{
+	ammoCount = 10;
 }
 
 void AFPSCharacter::Shoot()

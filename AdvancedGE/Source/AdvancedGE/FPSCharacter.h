@@ -29,11 +29,13 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	int ammoCount = 2;
+	int ammoCount = 10;
 
 	void MoveForward(float Value);
 
 	void MoveRight(float Value);
+
+	void Reload();
 
 	void Shoot();
 
