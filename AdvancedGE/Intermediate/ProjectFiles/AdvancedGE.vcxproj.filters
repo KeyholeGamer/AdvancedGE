@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AdvancedGE.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D7FDFF7D-F8EF-4451-9B10-F68E1CB46FE3}</UniqueIdentifier>
+      <UniqueIdentifier>{EC62D651-5A1B-4073-AFA1-BC5A8C6F3989}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AdvancedGE.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{34787C4C-43F3-4D6B-BC42-581F3512156E}</UniqueIdentifier>
+      <UniqueIdentifier>{5B9FBB54-2236-43C3-BAF9-FBBE6DD65C0F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AdvancedGE">
-      <UniqueIdentifier>{19E25E94-69B2-4794-8DA1-16FFC27DADA8}</UniqueIdentifier>
+      <UniqueIdentifier>{FB647483-5766-45EB-A9FF-27F9AB455B31}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AdvancedGE\AdvancedGE.Build.cs">
       <Filter>Source\AdvancedGE</Filter>
@@ -60,6 +60,12 @@
       <Filter>Source\AdvancedGE</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\AdvancedGE\FPSTarget.h">
+      <Filter>Source\AdvancedGE</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AdvancedGE\Rocket.cpp">
+      <Filter>Source\AdvancedGE</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdvancedGE\Rocket.h">
       <Filter>Source\AdvancedGE</Filter>
     </ClInclude>
   </ItemGroup>

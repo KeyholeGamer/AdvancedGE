@@ -260,11 +260,11 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt"
-/I D:\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine
-/Yc"D:\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.cpp"
-/Fo"D:\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+/I "D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine"
+/Yc"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.cpp"
+/Fo"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
 /TP
 /GR-
 /W4

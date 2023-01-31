@@ -115,26 +115,38 @@ void AFPSCharacter::Shoot()
 	}
 }
 
-void AFPSCharacter::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+//void AFPSCharacter::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+//{
+//	/*if (OtherActor->ActorHasTag(TEXT("Ammo")))
+//	{
+//		ammoCount = 10;
+//		OtherActor->Destroy();
+//		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, ""+ammoCount);
+//	}*/
+//	UE_LOG(LogTemp, Warning, TEXT("CollisonTest"));
+//
+//}
+//
+//void AFPSCharacter::OverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+//{
+//	if (OtherActor->ActorHasTag(TEXT("Ammo")))
+//	{
+//		ammoCount = 10;
+//		OtherActor->Destroy();
+//		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "" + ammoCount);
+//	}
+//}
+void AFPSCharacter::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent)
 {
-	if (OtherActor->ActorHasTag(TEXT("Ammo")))
-	{
-		ammoCount = 10;
+	//if (OtherActor != this && OtherComponent->IsSimulatingPhysics())
+	
+
+		/*OtherComponent->AddImpulseAtLocation
+		(ProjectileMovementComponent->Velocity * 100.0f, Hit.ImpactPoint);*/
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("RELOADED."));
 		OtherActor->Destroy();
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, ""+ammoCount);
-	}
+	
 
 }
-
-void AFPSCharacter::OverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
-{
-	if (OtherActor->ActorHasTag(TEXT("Ammo")))
-	{
-		ammoCount = 10;
-		OtherActor->Destroy();
-		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, "" + ammoCount);
-	}
-}
-
 
 

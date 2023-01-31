@@ -10,7 +10,6 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class UPrimitiveComponent;
 class AActor;
-struct FHitResult;
 #ifdef ADVANCEDGE_FPSCharacter_generated_h
 #error "FPSCharacter.generated.h already included, missing '#pragma once' in FPSCharacter.h"
 #endif
@@ -19,14 +18,12 @@ struct FHitResult;
 #define AdvancedGE_Source_AdvancedGE_FPSCharacter_h_15_SPARSE_DATA
 #define AdvancedGE_Source_AdvancedGE_FPSCharacter_h_15_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOverlapEnd); \
-	DECLARE_FUNCTION(execOverlapBegin);
+	DECLARE_FUNCTION(execOnHit);
 
 
 #define AdvancedGE_Source_AdvancedGE_FPSCharacter_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOverlapEnd); \
-	DECLARE_FUNCTION(execOverlapBegin);
+	DECLARE_FUNCTION(execOnHit);
 
 
 #define AdvancedGE_Source_AdvancedGE_FPSCharacter_h_15_INCLASS_NO_PURE_DECLS \
