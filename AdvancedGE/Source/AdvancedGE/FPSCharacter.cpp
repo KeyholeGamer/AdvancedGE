@@ -68,46 +68,61 @@ void AFPSCharacter::Reload()
 	ammoCount = 10;
 }
 
+void AFPSCharacter::BulletSwap() 
+{
+	bulletType++;
+	if (bulletType > 5) 
+	{
+		bulletType = 1;
+	}
+}
+
 void AFPSCharacter::Shoot()
 {
 	if (ammoCount > 0) 
 	{
-		//Attempt to shoot a projectile.
-		if (ProjectileClass)
+
+		if (bulletType == 1) 
 		{
-			// Get the camera transform.
-			FVector CameraLocation;
-			FRotator CameraRotation;
-			GetActorEyesViewPoint(CameraLocation, CameraRotation);
-
-			// Set MuzzleOffset to spawn projectiles slightly in front of the camera.
-			MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
-
-			// Transform MuzzleOffset from camera space to world space.
-			FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
-
-			// Skew the aim to be slightly upwards.
-			FRotator MuzzleRotation = CameraRotation;
-			MuzzleRotation.Pitch += 10.0f;
-
-			UWorld* World = GetWorld();
-			if (World)
+			if (ProjectileClass)
 			{
-				FActorSpawnParameters SpawnParams;
-				SpawnParams.Owner = this;
-				SpawnParams.Instigator = GetInstigator();
+				// Get the camera transform.
+				FVector CameraLocation;
+				FRotator CameraRotation;
+				GetActorEyesViewPoint(CameraLocation, CameraRotation);
 
-				// Spawn the projectile at the muzzle.
-				AFPSProjectile* Projectile = World->SpawnActor<AFPSProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
-				if (Projectile)
+				// Set MuzzleOffset to spawn projectiles slightly in front of the camera.
+				MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
+
+				// Transform MuzzleOffset from camera space to world space.
+				FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
+
+				// Skew the aim to be slightly upwards.
+				FRotator MuzzleRotation = CameraRotation;
+				MuzzleRotation.Pitch += 10.0f;
+
+				UWorld* World = GetWorld();
+				if (World)
 				{
-					// Set the projectile's initial trajectory.
-					FVector LaunchDirection = MuzzleRotation.Vector();
-					Projectile->FireInDirection(LaunchDirection);
-					ammoCount--;
+					FActorSpawnParameters SpawnParams;
+					SpawnParams.Owner = this;
+					SpawnParams.Instigator = GetInstigator();
+
+					// Spawn the projectile at the muzzle.
+					AFPSProjectile* Projectile = World->SpawnActor<AFPSProjectile>(ProjectileClass, MuzzleLocation, MuzzleRotation, SpawnParams);
+					if (Projectile)
+					{
+						// Set the projectile's initial trajectory.
+						FVector LaunchDirection = MuzzleRotation.Vector();
+						Projectile->FireInDirection(LaunchDirection);
+						ammoCount--;
+					}
 				}
 			}
 		}
+		//Attempt to shoot a projectile.
+		
+		
 	}
 	if (ammoCount == 0) 
 	{

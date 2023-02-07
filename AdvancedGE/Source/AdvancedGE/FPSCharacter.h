@@ -31,11 +31,15 @@ public:
 
 	int ammoCount = 10;
 
+	int bulletType = 1;
+
 	void MoveForward(float Value);
 
 	void MoveRight(float Value);
 
 	void Reload();
+
+	void BulletSwap();
 
 	void Shoot();
 
@@ -53,6 +57,7 @@ public:
 	//Projectile class to spawn.
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 		TSubclassOf<class AFPSProjectile> ProjectileClass;
+	TSubclassOf<class Rocket> ProjectileClass1;
 
 	//UFUNCTION()
 		//void OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

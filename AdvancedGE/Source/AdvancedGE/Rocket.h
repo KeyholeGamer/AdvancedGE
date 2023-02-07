@@ -25,4 +25,27 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION()
+		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit);
+
+	// Sphere collision component.
+	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile")
+		USphereComponent* CollisionComponent;
+
+	//Sphere mesh
+	UPROPERTY(VisibleDefaultsOnly, Category = "Projectile")
+		UStaticMeshComponent* ProjectileMeshComponent;
+
+	// The Objects Movement abilty.
+	UPROPERTY(VisibleAnywhere, Category = "Movement")
+		UProjectileMovementComponent* ProjectileMovementComponent;
+
+	// The Shoot's material 
+	UPROPERTY(VisibleDefaultsOnly, Category = "Movement")
+		UMaterialInstanceDynamic* ProjectileMaterialInstance;
+
+	//Controls and sets Direction 
+	void FireInDirection(const FVector& ShootDirection);
+
+
 };

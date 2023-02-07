@@ -57,7 +57,7 @@ AFPSProjectile::AFPSProjectile()
 		}
 
 		static ConstructorHelpers::FObjectFinder<UMaterial>Material
-		(TEXT("/ Game / Materials / MT_BasicShoot.MT_BasicShoot")); // Paste Material reference HERE
+		(TEXT("'Material/Game/Materials/MT_BasicShoot.MT_BasicShoot'")); // Paste Material reference HERE
 		if (Material.Succeeded())
 		{
 			ProjectileMaterialInstance =
