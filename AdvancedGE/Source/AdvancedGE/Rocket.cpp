@@ -44,30 +44,27 @@ ARocket::ARocket()
 		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 	}
 
-	if (!ProjectileMeshComponent)
-	{
-		ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMeshComponent"));
+	//if (!ProjectileMeshComponent)
+	//{
+	//	ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("'ProjectileMeshComponent'"));
 
-		static ConstructorHelpers::FObjectFinder<UStaticMesh>Mesh
-		(TEXT("StaticMesh'/Game/Meshes/SphereMesh_1_.SphereMesh_1_'")); // Paste Mesh reference HERE
+	//	static ConstructorHelpers::FObjectFinder<UStaticMesh>Mesh(TEXT("'/Game/Meshes/SphereMesh_1_.SphereMesh_1_'")); // Paste Mesh reference HERE
 
-		if (Mesh.Succeeded())
-		{
-			ProjectileMeshComponent->SetStaticMesh(Mesh.Object);
-		}
+	//	if (Mesh.Succeeded())
+	//	{
+	//		ProjectileMeshComponent->SetStaticMesh(Mesh.Object);
+	//	}
 
-		static ConstructorHelpers::FObjectFinder<UMaterial>Material
-		(TEXT("/ Game / Materials / MT_BasicShoot.MT_BasicShoot")); // Paste Material reference HERE
-		if (Material.Succeeded())
-		{
-			ProjectileMaterialInstance =
-				UMaterialInstanceDynamic::Create(Material.Object, ProjectileMeshComponent);
-		}
+	//	static ConstructorHelpers::FObjectFinder<UMaterial>Material(TEXT("'/Game/Materials/MT_BasicShoot.MT_BasicShoot'")); // Paste Material reference HERE
+	//	if (Material.Succeeded())
+	//	{
+	//		ProjectileMaterialInstance = UMaterialInstanceDynamic::Create(Material.Object, ProjectileMeshComponent);
+	//	}
 
-		ProjectileMeshComponent->SetMaterial(0, ProjectileMaterialInstance);
-		ProjectileMeshComponent->SetRelativeScale3D(FVector(0.09f, 0.09f, 0.09f));
-		ProjectileMeshComponent->SetupAttachment(RootComponent);
-	}
+	//	ProjectileMeshComponent->SetMaterial(0, ProjectileMaterialInstance);
+	//	ProjectileMeshComponent->SetRelativeScale3D(FVector(0.09f, 0.09f, 0.09f));
+	//	ProjectileMeshComponent->SetupAttachment(RootComponent);
+	//}
 }
 
 
@@ -93,7 +90,7 @@ void ARocket::Tick(float DeltaTime)
 
 void ARocket::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor != this && OtherActor->ActorHasTag(TEXT("Rcoket")))
+	if (OtherActor != this && OtherActor->ActorHasTag(TEXT("Rocket")))
 	{
 		Destroy();
 		OtherActor->Destroy();

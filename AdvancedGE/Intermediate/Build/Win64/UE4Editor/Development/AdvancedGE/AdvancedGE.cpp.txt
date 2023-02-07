@@ -1,2 +1,2 @@
-D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Definitions.AdvancedGE.h
-D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\AdvancedGE.h
+D:\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Definitions.AdvancedGE.h
+D:\AdvancedGE\AdvancedGE\Source\AdvancedGE\AdvancedGE.h

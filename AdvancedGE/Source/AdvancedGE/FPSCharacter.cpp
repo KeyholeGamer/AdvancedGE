@@ -120,6 +120,10 @@ void AFPSCharacter::Shoot()
 				}
 			}
 		}
+		if(bulletType == 2)
+		{
+
+		}
 		//Attempt to shoot a projectile.
 		
 		

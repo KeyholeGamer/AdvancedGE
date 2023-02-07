@@ -48,20 +48,17 @@ AFPSProjectile::AFPSProjectile()
 	{
 		ProjectileMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ProjectileMeshComponent"));
 
-		static ConstructorHelpers::FObjectFinder<UStaticMesh>Mesh
-		(TEXT("StaticMesh'/Game/Meshes/SphereMesh_1_.SphereMesh_1_'")); // Paste Mesh reference HERE
+		static ConstructorHelpers::FObjectFinder<UStaticMesh>Mesh(TEXT("'/Game/Meshes/SphereMesh_1_.SphereMesh_1_'")); // Paste Mesh reference HERE
 
 		if (Mesh.Succeeded())
 		{
 			ProjectileMeshComponent->SetStaticMesh(Mesh.Object);
 		}
 
-		static ConstructorHelpers::FObjectFinder<UMaterial>Material
-		(TEXT("'Material/Game/Materials/MT_BasicShoot.MT_BasicShoot'")); // Paste Material reference HERE
+		static ConstructorHelpers::FObjectFinder<UMaterial>Material(TEXT("'/Game/Materials/MT_BasicShoot.MT_BasicShoot'")); // Paste Material reference HERE
 		if (Material.Succeeded())
 		{
-			ProjectileMaterialInstance =
-				UMaterialInstanceDynamic::Create(Material.Object, ProjectileMeshComponent);
+			ProjectileMaterialInstance = UMaterialInstanceDynamic::Create(Material.Object, ProjectileMeshComponent);
 		}
 
 		ProjectileMeshComponent->SetMaterial(0, ProjectileMaterialInstance);
