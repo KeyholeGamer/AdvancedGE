@@ -17,7 +17,6 @@ AFPSCharacter::AFPSCharacter()
 void AFPSCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	Super::BeginPlay();
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("We are using FPSCharacter."));
 
 }
@@ -47,6 +46,7 @@ void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AFPSCharacter::Jump);
 	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &AFPSCharacter::Shoot);
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, this, &AFPSCharacter::Reload);
+	PlayerInputComponent->BindAction("AmmoSwap", IE_Pressed, this, &AFPSCharacter::BulletSwap);
 }
 
 void AFPSCharacter::MoveForward(float Value)
@@ -71,7 +71,8 @@ void AFPSCharacter::Reload()
 void AFPSCharacter::BulletSwap() 
 {
 	bulletType++;
-	if (bulletType > 5) 
+	GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT(""+bulletType));
+	if (bulletType > 2) 
 	{
 		bulletType = 1;
 	}
@@ -81,7 +82,6 @@ void AFPSCharacter::Shoot()
 {
 	if (ammoCount > 0) 
 	{
-
 		if (bulletType == 1) 
 		{
 			if (ProjectileClass)
@@ -122,13 +122,45 @@ void AFPSCharacter::Shoot()
 		}
 		if(bulletType == 2)
 		{
+			if (ProjectileClass1)
+			{
+				// Get the camera transform.
+				FVector CameraLocation;
+				FRotator CameraRotation;
+				GetActorEyesViewPoint(CameraLocation, CameraRotation);
 
+				// Set MuzzleOffset to spawn projectiles slightly in front of the camera.
+				MuzzleOffset.Set(100.0f, 0.0f, 0.0f);
+
+				// Transform MuzzleOffset from camera space to world space.
+				FVector MuzzleLocation = CameraLocation + FTransform(CameraRotation).TransformVector(MuzzleOffset);
+
+				// Skew the aim to be slightly upwards.
+				FRotator MuzzleRotation = CameraRotation;
+				MuzzleRotation.Pitch += 10.0f;
+
+				UWorld* World = GetWorld();
+				if (World)
+				{
+					FActorSpawnParameters SpawnParams;
+					SpawnParams.Owner = this;
+					SpawnParams.Instigator = GetInstigator();
+
+					// Spawn the projectile at the muzzle.
+					ARocket* Projectile = World->SpawnActor<ARocket>(ProjectileClass1, MuzzleLocation, MuzzleRotation, SpawnParams);
+					if (Projectile)
+					{
+						// Set the projectile's initial trajectory.
+						FVector LaunchDirection = MuzzleRotation.Vector();
+						Projectile->FireInDirection(LaunchDirection);
+						ammoCount--;
+					}
+				}
+			}
 		}
 		//Attempt to shoot a projectile.
-		
-		
 	}
-	if (ammoCount == 0) 
+	if (ammoCount <= 0) 
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("No ammo."));
 	}

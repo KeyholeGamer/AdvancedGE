@@ -22,7 +22,7 @@ void EmptyLinkFunctionForGeneratedCodeBasicWall() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
-	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInstance_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ABasicWall::execOnHit)
@@ -171,7 +171,7 @@ void EmptyLinkFunctionForGeneratedCodeBasicWall() {}
 		{ "ModuleRelativePath", "BasicWall.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasicWall_Statics::NewProp_BlockWallMaterialInstance = { "BlockWallMaterialInstance", nullptr, (EPropertyFlags)0x0010000000030001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABasicWall, BlockWallMaterialInstance), Z_Construct_UClass_UMaterialInstanceDynamic_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABasicWall_Statics::NewProp_BlockWallMaterialInstance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABasicWall_Statics::NewProp_BlockWallMaterialInstance_MetaData)) };
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABasicWall_Statics::NewProp_BlockWallMaterialInstance = { "BlockWallMaterialInstance", nullptr, (EPropertyFlags)0x0010000000030001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABasicWall, BlockWallMaterialInstance), Z_Construct_UClass_UMaterialInstance_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABasicWall_Statics::NewProp_BlockWallMaterialInstance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABasicWall_Statics::NewProp_BlockWallMaterialInstance_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasicWall_Statics::NewProp_BlockWall_MetaData[] = {
 		{ "Category", "Rocket Wall" },
@@ -212,7 +212,7 @@ void EmptyLinkFunctionForGeneratedCodeBasicWall() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABasicWall, 3919914546);
+	IMPLEMENT_CLASS(ABasicWall, 183022608);
 	template<> ADVANCEDGE_API UClass* StaticClass<ABasicWall>()
 	{
 		return ABasicWall::StaticClass();

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\AdvancedGE.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3DC6B4D3-35DB-4DFA-AD7C-61A9BA15FCB2}</UniqueIdentifier>
+      <UniqueIdentifier>{A6C68B52-4256-4073-BF1F-CC7610A7781C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AdvancedGE.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{601D2CE8-19FC-4944-8E8A-4B1722A6CE31}</UniqueIdentifier>
+      <UniqueIdentifier>{611D9FF8-2FEE-4084-8AC0-D2B7976534BC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\AdvancedGE">
-      <UniqueIdentifier>{3620590E-AD84-46A5-9AFD-A05143796692}</UniqueIdentifier>
+      <UniqueIdentifier>{1BDB4040-1B2E-43A6-8DAA-93E6B1548216}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\AdvancedGE\AdvancedGE.Build.cs">
       <Filter>Source\AdvancedGE</Filter>
@@ -48,6 +48,12 @@
       <Filter>Source\AdvancedGE</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\AdvancedGE\BasicWall.h">
+      <Filter>Source\AdvancedGE</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\AdvancedGE\Bouncer.cpp">
+      <Filter>Source\AdvancedGE</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\AdvancedGE\Bouncer.h">
       <Filter>Source\AdvancedGE</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\AdvancedGE\FPSCharacter.cpp">

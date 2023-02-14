@@ -24,6 +24,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ADVANCEDGE_API UClass* Z_Construct_UClass_AFPSProjectile_NoRegister();
+	ADVANCEDGE_API UClass* Z_Construct_UClass_ARocket_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AFPSCharacter::execOnHit)
 	{
@@ -128,6 +129,10 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass1_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ProjectileClass1;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -182,11 +187,19 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSCharacter, ProjectileClass), Z_Construct_UClass_AFPSProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass1_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "ModuleRelativePath", "FPSCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass1 = { "ProjectileClass1", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSCharacter, ProjectileClass1), Z_Construct_UClass_ARocket_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass1_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFPSCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSCharacter_Statics::NewProp_FPSCameraComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSCharacter_Statics::NewProp_FPSMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSCharacter_Statics::NewProp_MuzzleOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSCharacter_Statics::NewProp_ProjectileClass1,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFPSCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFPSCharacter>::IsAbstract,
@@ -215,7 +228,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSCharacter, 1253432946);
+	IMPLEMENT_CLASS(AFPSCharacter, 2111641873);
 	template<> ADVANCEDGE_API UClass* StaticClass<AFPSCharacter>()
 	{
 		return AFPSCharacter::StaticClass();

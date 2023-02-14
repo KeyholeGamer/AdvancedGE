@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"D:\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGE\\AdvancedGE.Build.cs",
-		"D:\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGE.Target.cs",
-		"D:\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGEEditor.Target.cs"
+		"D:\\New folder\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGE\\AdvancedGE.Build.cs",
+		"D:\\New folder\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGE.Target.cs",
+		"D:\\New folder\\AdvancedGE\\AdvancedGE\\Source\\AdvancedGEEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.2"
 }

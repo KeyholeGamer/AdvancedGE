@@ -15,14 +15,14 @@ ABasicWall::ABasicWall()
 	BlockWallMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BlockWallMesh"));
 	
 	
-	static ConstructorHelpers::FObjectFinder<UStaticMesh>Mesh(TEXT("'/Engine/BasicShapes/Cube.Cube'")); // Paste Mesh reference HERE
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>Mesh(TEXT("'/Game/Meshes/Cube.Cube'")); // Paste Mesh reference HERE
 
 	if (Mesh.Succeeded())
 	{
 		BlockWallMeshComponent->SetStaticMesh(Mesh.Object);
 	}
 
-	BlockWallMaterialInstance = CreateDefaultSubobject<UMaterialInstanceDynamic>(TEXT("BlockWallMaterial"));
+	BlockWallMaterialInstance = CreateDefaultSubobject<UMaterialInstance>(TEXT("BlockWallMaterial"));
 	static ConstructorHelpers::FObjectFinder<UMaterial>Material(TEXT("'/Game/Materials/MT_RocketWall.MT_RocketWall'")); // Paste Material reference HERE
 	if (Material.Succeeded())
 	{
