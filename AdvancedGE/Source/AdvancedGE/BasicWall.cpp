@@ -22,7 +22,7 @@ ABasicWall::ABasicWall()
 		BlockWallMeshComponent->SetStaticMesh(Mesh.Object);
 	}
 
-	BlockWallMaterialInstance = CreateDefaultSubobject<UMaterialInstance>(TEXT("BlockWallMaterial"));
+	BlockWallMaterialInstance = CreateDefaultSubobject<UMaterialInstanceDynamic>(TEXT("BlockWallMaterial"));
 	static ConstructorHelpers::FObjectFinder<UMaterial>Material(TEXT("'/Game/Materials/MT_RocketWall.MT_RocketWall'")); // Paste Material reference HERE
 	if (Material.Succeeded())
 	{

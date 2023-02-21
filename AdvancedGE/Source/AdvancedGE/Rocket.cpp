@@ -10,7 +10,7 @@ ARocket::ARocket()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Delete the projectile after 3 seconds.
-	InitialLifeSpan = 3.0f;
+	InitialLifeSpan = 2.5f;
 
 	if (!RootComponent)
 	{
@@ -41,7 +41,7 @@ ARocket::ARocket()
 		ProjectileMovementComponent->bRotationFollowsVelocity = true;
 		ProjectileMovementComponent->bShouldBounce = false;
 		ProjectileMovementComponent->Bounciness = 0.3f;
-		ProjectileMovementComponent->ProjectileGravityScale = 20.0f;
+		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
 	}
 
 	if (!ProjectileMeshComponent)
@@ -90,8 +90,9 @@ void ARocket::Tick(float DeltaTime)
 
 void ARocket::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, FVector NormalImpulse, const FHitResult& Hit)
 {
-	if (OtherActor != this && OtherActor->ActorHasTag(TEXT("Rocket")))
+	if (OtherActor != this && OtherComponent->IsSimulatingPhysics())
 	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("HIT."));
 		Destroy();
 		OtherActor->Destroy();
 	}

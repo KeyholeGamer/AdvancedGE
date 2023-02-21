@@ -6,7 +6,9 @@
 #include "GameFramework/Character.h"
 #include "Components/CapsuleComponent.h"
 #include "Camera/CameraComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "Rocket.h"
+#include "Bouncer.h"
 #include "FPSProjectile.h"
 #include "FPSCharacter.generated.h"
 
@@ -23,6 +25,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	virtual void Landed(const FHitResult& Hit)override;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -30,9 +34,20 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	int ammoCount = 10;
+	int BaseammoCount = 30;
+
+	int RocketammoCount = 10;
+
+	int BouncerammoCount = 10;
 
 	int bulletType = 1;
+
+	float JumpHeight = 600.f;
+
+	bool JumpPower;
+
+	float OverHeatcount = 0;
+	bool OverHeating = false;
 
 	void MoveForward(float Value);
 
@@ -40,9 +55,17 @@ public:
 
 	void Reload();
 
+	void Dash();
+
 	void BulletSwap();
 
 	void Shoot();
+
+	void ReloadRocket();
+
+	void ReloadBouncer();
+
+	void JumpPowerUp();
 
 	// FPS camera
 	UPROPERTY(VisibleAnywhere)
@@ -62,11 +85,24 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = Projectile)
 	TSubclassOf<class ARocket> ProjectileClass1;
 
-	//UFUNCTION()
-		//void OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+		TSubclassOf<class ABouncer> ProjectileClass2;
 
-	//UFUNCTION()
-		//void OverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+	
 	UFUNCTION()
 		void OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent);
+
+	UFUNCTION()
+		void DoubleJump();
+	UPROPERTY()
+		int DoubleJumpCounter;
+
+	int DashCounter;
+
+	void SwitchLevel();
+
+	TArray<FString> level;
+
+	virtual void RestartCooling();
+
 };

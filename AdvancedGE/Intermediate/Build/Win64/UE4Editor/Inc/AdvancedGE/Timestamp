@@ -1,7 +1,11 @@
 D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\AdvancedGEGameModeBase.h
-D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\FPSProjectile.h
-D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\FPSTarget.h
-D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\Rocket.h
-D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\BasicWall.h
-D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\FPSCharacter.h
 D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\Bouncer.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\BouncerAmmo.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\EndGoal.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\FPSProjectile.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\JumpPowerup.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\BasicWall.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\Rocket.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\RocketAmmo.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\CoolingPad.h
+D:\New folder\AdvancedGE\AdvancedGE\Source\AdvancedGE\FPSCharacter.h

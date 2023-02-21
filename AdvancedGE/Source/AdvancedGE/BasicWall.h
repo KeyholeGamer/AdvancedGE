@@ -31,7 +31,7 @@ public:
 		UStaticMeshComponent* BlockWallMeshComponent;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Rocket Wall")
-		UMaterialInstance* BlockWallMaterialInstance;
+		UMaterialInstanceDynamic* BlockWallMaterialInstance;
 
 	UPROPERTY(EditAnywhere, Category = "Rocket Wall")
 		UBoxComponent* BlockWall;

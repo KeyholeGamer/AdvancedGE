@@ -1,0 +1,27 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-AdvancedGE-2557.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\AdvancedGEEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\AdvancedGE.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\AdvancedGEGameModeBase.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\BasicWall.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Bouncer.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\FPSCharacter.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\FPSProjectile.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\FPSTarget.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Rocket.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\AdvancedGE.init.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\AdvancedGEGameModeBase.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\BasicWall.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Bouncer.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\FPSCharacter.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\FPSProjectile.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\FPSTarget.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Rocket.gen.cpp.obj"
+"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\Default.rc2.res"
+/OUT:"D:\New folder\AdvancedGE\AdvancedGE\Intermediate\Build\Win64\UE4Editor\Development\AdvancedGE\UE4Editor-AdvancedGE-2557.lib"

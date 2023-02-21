@@ -2,6 +2,7 @@
 
 
 #include "FPSProjectile.h"
+#include <AdvancedGE/FPSCharacter.h>
 
 // Sets default values
 AFPSProjectile::AFPSProjectile()
@@ -10,7 +11,7 @@ AFPSProjectile::AFPSProjectile()
 	PrimaryActorTick.bCanEverTick = true;
 
 	// Delete the projectile after 3 seconds.
-	InitialLifeSpan = 3.0f;
+	InitialLifeSpan = 1.5f;
 
 	if (!RootComponent)
 	{
@@ -41,7 +42,7 @@ AFPSProjectile::AFPSProjectile()
 		ProjectileMovementComponent->bRotationFollowsVelocity = true;
 		ProjectileMovementComponent->bShouldBounce = false;
 		ProjectileMovementComponent->Bounciness = 0.3f;
-		ProjectileMovementComponent->ProjectileGravityScale = 0.0f;
+		ProjectileMovementComponent->ProjectileGravityScale = 2.0f;
 	}
 
 	if (!ProjectileMeshComponent)
@@ -88,9 +89,9 @@ void AFPSProjectile::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor
 	if (OtherActor != this && OtherComponent->IsSimulatingPhysics())
 	{
 		
-		/*OtherComponent->AddImpulseAtLocation
-		(ProjectileMovementComponent->Velocity * 100.0f, Hit.ImpactPoint);*/
 		GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Red, TEXT("HIT."));
+
+
 		Destroy();
 		OtherActor->Destroy();
 	}
